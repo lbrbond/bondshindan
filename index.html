@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>会社の第一印象診断 by BOND ／ 商談前の数秒で、会社は損をしていないか。</title>
+<meta name="description" content="営業担当・面接官・管理職の第一印象を、フォーム回答ベースで2〜3分で簡易整理。LBR合同会社が運営するBOND。個人のお客様向けにオーダースーツを10年以上お作りしてきた経験を、組織を一流に整えたい会社様のために。">
+
+<link rel="preload" as="image" href="assets/lp-fv.png" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0A1F3A;
+  --navy-deep:#06152A;
+  --navy-soft:#1A3458;
+  --ink:#1C2330;
+  --paper:#F4EFE6;
+  --paper-warm:#EDE6D6;
+  --paper-cool:#F8F5EE;
+  --gold:#A8854C;
+  --gold-deep:#8A6A38;
+  --gold-soft:#C9A875;
+  --line:#D6CDB8;
+  --line-dark:#3A4A66;
+  --muted:#6B7384;
+  --crimson:#7A2E2E;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans JP","Yu Gothic","游ゴシック",sans-serif;
+  font-weight:400;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.85;
+  font-feature-settings:"palt" 1;
+  -webkit-font-smoothing:antialiased;
+}
+.serif-en{font-family:"Cormorant Garamond",serif;font-weight:500;letter-spacing:0.02em}
+.serif-jp{font-family:"Noto Serif JP",serif}
+
+/* ============ Top bar ============ */
+.topbar{
+  background:var(--navy-deep);
+  color:var(--paper);
+  border-bottom:1px solid var(--line-dark);
+  padding:10px 24px;
+  font-size:11px;
+  letter-spacing:0.18em;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:300;
+}
+.topbar .lhs span{opacity:0.7}
+.topbar .rhs{display:flex;gap:24px;opacity:0.85}
+@media(max-width:720px){.topbar .rhs{display:none}}
+
+/* ============ Header / Hero ============ */
+.hero{
+  background:var(--navy);
+  color:var(--paper);
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line-dark);
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(ellipse at 80% 20%, rgba(168,133,76,0.18), transparent 50%),
+    radial-gradient(ellipse at 10% 80%, rgba(168,133,76,0.08), transparent 50%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:64px 32px 80px;
+  position:relative;
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:64px;
+  align-items:end;
+}
+.hero-meta{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:36px;
+  font-size:11px;
+  letter-spacing:0.22em;
+  font-weight:300;
+}
+.hero-meta .mark{
+  display:inline-block;
+  padding:5px 14px;
+  border:1px solid var(--gold-soft);
+  color:var(--gold-soft);
+  border-radius:2px;
+}
+.hero-meta .divider{
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg,var(--gold-soft) 0%,transparent 100%);
+  opacity:0.5;
+}
+.hero-eyebrow{
+  font-size:12px;
+  letter-spacing:0.32em;
+  color:var(--gold-soft);
+  margin-bottom:20px;
+  font-weight:300;
+  text-transform:uppercase;
+}
+.hero h1{
+  font-family:"Noto Serif JP",serif;
+  font-weight:500;
+  font-size:clamp(34px, 4.6vw, 60px);
+  line-height:1.32;
+  letter-spacing:-0.01em;
+  margin-bottom:28px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--gold-soft);
+  border-bottom:1px solid var(--gold);
+  padding-bottom:2px;
+}
+.hero-lead{
+  font-size:16px;
+  line-height:2.0;
+  color:#D8D2C4;
+  margin-bottom:36px;
+  max-width:560px;
+  font-weight:300;
+}
+.hero-sub-lead{
+  display:inline-block;
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(168,133,76,0.25);
+  font-size:14px;
+  color:#C8C0AE;
+}
+.hero-sub-lead strong{
+  color:var(--gold-soft);
+  font-weight:500;
+}
+.hero-cta-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.hero-cta-sep{
+  color:rgba(200,192,174,0.4);
+  font-size:11px;
+}
+.hero-cta{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  align-items:flex-start;
+}
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  background:var(--gold);
+  color:var(--navy-deep);
+  padding:18px 36px;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:0.1em;
+  text-decoration:none;
+  border:1px solid var(--gold);
+  border-radius:2px;
+  transition:all 0.3s ease;
+}
+.btn-primary:hover{background:var(--gold-soft);border-color:var(--gold-soft);transform:translateY(-1px)}
+.btn-primary .arrow{font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:400}
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--paper);
+  padding:14px 0;
+  font-size:13px;
+  letter-spacing:0.08em;
+  text-decoration:none;
+  border-bottom:1px solid var(--gold-soft);
+}
+.btn-secondary:hover{color:var(--gold-soft)}
+.hero-note{
+  font-size:11px;
+  color:#B8B0A2;
+  letter-spacing:0.05em;
+  margin-top:6px;
+}
+
+.hero-side{
+  border-left:1px solid rgba(168,133,76,0.3);
+  padding-left:36px;
+  align-self:stretch;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.hero-side .num{
+  font-family:"Cormorant Garamond",serif;
+  font-size:96px;
+  line-height:1;
+  color:var(--gold);
+  font-weight:300;
+  margin-bottom:8px;
+}
+.hero-side .num-unit{
+  font-family:"Noto Serif JP",serif;
+  font-size:18px;
+  color:var(--paper);
+  margin-bottom:24px;
+}
+.hero-side .num-caption{
+  font-size:13px;
+  line-height:1.9;
+  color:#C8C0AE;
+  font-weight:300;
+}
+.hero-side .num-caption strong{
+  color:var(--gold-soft);
+  font-weight:500;
+}
+.hero-side cite{
+  font-size:10px;
+  color:#9A917F;
+  font-style:normal;
+  letter-spacing:0.05em;
+  margin-top:12px;
+  display:block;
+}
+
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr;padding:48px 24px;gap:48px}
+  .hero-side{border-left:none;border-top:1px solid rgba(168,133,76,0.3);padding-left:0;padding-top:32px}
+  .hero-side .num{font-size:72px}
+}
+
+/* ============ Section base ============ */
+section{padding:88px 32px;border-bottom:1px solid var(--line)}
+.container{max-width:1180px;margin:0 auto}
+.section-head{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:28px;
+  align-items:baseline;
+  margin-bottom:48px;
+  padding-bottom:18px;
+  border-bottom:1px solid var(--line);
+}
+.section-head .num{
+  font-family:"Cormorant Garamond",serif;
+  font-size:14px;
+  letter-spacing:0.2em;
+  color:var(--gold-deep);
+  font-weight:500;
+}
+.section-head .meta{
+  font-size:11px;
+  letter-spacing:0.2em;
+  color:var(--muted);
+  text-align:right;
+  font-weight:300;
+}
+.section-title{
+  font-family:"Noto Serif JP",serif;
+  font-weight:500;
+  font-size:clamp(26px, 3vw, 38px);
+  line-height:1.4;
+  color:var(--navy);
+  margin-bottom:14px;
+  grid-column:1/-1;
+}
+.section-lead{
+  grid-column:1/-1;
+  font-size:15px;
+  color:var(--ink);
+  line-height:2;
+  max-width:780px;
+  font-weight:400;
+}
+
+/* ============ S1: 問題提起 ============ */
+.problem{background:var(--paper-warm)}
+.problem-quote{
+  font-family:"Noto Serif JP",serif;
+  font-size:clamp(20px, 2.2vw, 26px);
+  line-height:1.9;
+  color:var(--navy);
+  font-weight:400;
+  padding:32px 0 32px 36px;
+  border-left:3px solid var(--gold);
+  margin:36px 0;
+  position:relative;
+}
+.problem-quote::before{
+  content:"";
+  font-family:"Cormorant Garamond",serif;
+  font-size:120px;
+  line-height:1;
+  color:var(--gold-soft);
+  position:absolute;
+  left:-8px;
+  top:-30px;
+  opacity:0.4;
+}
+.problem-quote .by{
+  display:block;
+  font-family:"Noto Sans JP",sans-serif;
+  font-size:12px;
+  letter-spacing:0.15em;
+  color:var(--muted);
+  margin-top:18px;
+  font-weight:400;
+}
+.problem-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-top:48px;
+  border-top:1px solid var(--line);
+}
+.problem-cell{
+  padding:32px 28px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.problem-cell:nth-child(3n){border-right:none}
+.problem-cell .stat{
+  font-family:"Cormorant Garamond",serif;
+  font-size:48px;
+  font-weight:400;
+  color:var(--navy);
+  line-height:1;
+  margin-bottom:10px;
+}
+.problem-cell .stat .unit{
+  font-size:18px;
+  color:var(--gold-deep);
+  margin-left:4px;
+}
+.problem-cell .stat-label{
+  font-family:"Noto Serif JP",serif;
+  font-size:14px;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:8px;
+  letter-spacing:0.05em;
+}
+.problem-cell .stat-desc{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.8;
+}
+.problem-cell cite{
+  display:block;
+  font-size:10px;
+  color:#9A9486;
+  font-style:normal;
+  margin-top:10px;
+  letter-spacing:0.04em;
+}
+@media(max-width:720px){
+  .problem-grid{grid-template-columns:1fr}
+  .problem-cell{border-right:none}
+}
+
+/* ============ S2: セルフチェック ============ */
+.checklist{background:var(--paper-cool)}
+.check-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 56px;
+  border-top:1px solid var(--line);
+  margin-top:24px;
+}
+.check-item{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  padding:18px 4px;
+  border-bottom:1px solid var(--line);
+  font-size:14px;
+  line-height:1.7;
+  cursor:pointer;
+  transition:background 0.2s;
+}
+.check-item:hover{background:rgba(168,133,76,0.06)}
+.check-box{
+  flex-shrink:0;
+  width:18px;
+  height:18px;
+  border:1.5px solid var(--gold-deep);
+  margin-top:3px;
+  position:relative;
+  transition:all 0.2s;
+}
+.check-item.checked .check-box{
+  background:var(--gold);
+  border-color:var(--gold);
+}
+.check-item.checked .check-box::after{
+  content:"";
+  position:absolute;
+  left:4px;top:0;
+  width:6px;height:11px;
+  border:solid var(--paper);
+  border-width:0 2px 2px 0;
+  transform:rotate(45deg);
+}
+.check-item .num{
+  font-family:"Cormorant Garamond",serif;
+  font-size:13px;
+  color:var(--gold-deep);
+  width:24px;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.check-counter{
+  margin-top:36px;
+  padding:24px 28px;
+  background:var(--navy);
+  color:var(--paper);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-radius:2px;
+}
+.check-counter .label{font-size:12px;letter-spacing:0.15em;color:var(--gold-soft)}
+.check-counter .count{font-family:"Cormorant Garamond",serif;font-size:32px}
+.check-counter .verdict{font-size:13px;color:#D8D2C4;text-align:right;line-height:1.7;flex:1;margin:0 24px}
+@media(max-width:720px){
+  .check-grid{grid-template-columns:1fr;gap:0}
+  .check-counter{flex-direction:column;gap:14px;text-align:center}
+  .check-counter .verdict{text-align:center;margin:0}
+}
+
+/* ============ S3: 構造の説明 ============ */
+.structure{background:var(--navy);color:var(--paper)}
+.structure .section-title{color:var(--paper)}
+.structure .section-head{border-bottom-color:var(--line-dark)}
+.structure .section-lead{color:#D8D2C4}
+.structure-flow{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  margin-top:48px;
+}
+.flow-step{
+  padding:28px 24px;
+  border-right:1px solid var(--line-dark);
+  position:relative;
+}
+.flow-step:last-child{border-right:none}
+.flow-step .step-num{
+  font-family:"Cormorant Garamond",serif;
+  font-size:14px;
+  letter-spacing:0.2em;
+  color:var(--gold-soft);
+  margin-bottom:18px;
+  font-weight:400;
+}
+.flow-step h4{
+  font-family:"Noto Serif JP",serif;
+  font-size:18px;
+  font-weight:500;
+  color:var(--paper);
+  margin-bottom:14px;
+  line-height:1.5;
+}
+.flow-step p{font-size:13px;line-height:1.85;color:#C8C0AE;font-weight:300}
+.flow-step .arrow-down{display:none}
+@media(max-width:720px){
+  .structure-flow{grid-template-columns:1fr}
+  .flow-step{border-right:none;border-bottom:1px solid var(--line-dark);padding-bottom:36px}
+  .flow-step:last-child{border-bottom:none}
+}
+
+/* ============ S4: BONDの仕組み ============ */
+.mechanism{background:var(--paper)}
+.mech-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  margin-top:32px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.mech-col{
+  padding:36px 32px;
+  border-right:1px solid var(--line);
+}
+.mech-col:last-child{border-right:none}
+.mech-col h4{
+  font-family:"Noto Serif JP",serif;
+  font-size:13px;
+  letter-spacing:0.15em;
+  color:var(--muted);
+  margin-bottom:18px;
+  font-weight:400;
+}
+.mech-flow-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-size:13px;
+  padding:12px 0;
+  color:var(--ink);
+}
+.mech-flow-row .pill{
+  display:inline-block;
+  padding:7px 14px;
+  background:var(--paper-warm);
+  border:1px solid var(--line);
+  border-radius:2px;
+  font-size:12px;
+  font-weight:500;
+}
+.mech-flow-row .pill.bond{background:var(--navy);color:var(--paper);border-color:var(--navy)}
+.mech-flow-row .pill.struck{
+  text-decoration:line-through;
+  text-decoration-color:var(--crimson);
+  text-decoration-thickness:1.5px;
+  color:var(--muted);
+  background:transparent;
+}
+.mech-flow-row .arrow{color:var(--gold-deep);font-size:14px}
+.mech-result{
+  margin-top:24px;
+  padding:18px 20px;
+  background:rgba(168,133,76,0.1);
+  border-left:3px solid var(--gold);
+  font-size:13px;
+  line-height:1.8;
+}
+.mech-result strong{color:var(--navy);font-weight:600}
+
+/* 仕組み図解 縦フロー */
+.mech-chain{
+  list-style:none;
+  margin:8px 0 0 0;
+  padding:0;
+  position:relative;
+}
+.mech-chain li{
+  position:relative;
+  padding:14px 0 14px 28px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.mech-chain li::before{
+  content:"";
+  position:absolute;
+  left:7px; top:0; bottom:0;
+  width:1px;
+  background:var(--line);
+}
+.mech-chain li:first-child::before{top:50%}
+.mech-chain li:last-child::before{bottom:50%}
+.mech-chain li::after{
+  content:"";
+  position:absolute;
+  left:3px; top:50%;
+  width:9px; height:9px;
+  border-radius:50%;
+  background:var(--paper);
+  border:1.5px solid var(--gold-deep);
+  transform:translateY(-50%);
+}
+.mech-chain li:has(.struck)::after{
+  border-color:var(--muted);
+  background:var(--paper-warm);
+  border-style:dashed;
+}
+.mech-chain li .pill{flex-shrink:0}
+.mech-aside{
+  font-size:11px;
+  color:var(--muted);
+  letter-spacing:0.04em;
+  font-style:italic;
+}
+
+/* ============ S4b: 社員への3価値 ============ */
+.benefits{background:var(--paper)}
+.benefits-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-top:32px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.benefit-card{
+  padding:36px 32px;
+  border-right:1px solid var(--line);
+  position:relative;
+}
+.benefit-card:last-child{border-right:none}
+.benefit-card::before{
+  content:"";
+  position:absolute;
+  top:0; left:0;
+  width:32px; height:1px;
+  background:var(--gold);
+}
+.benefit-num{
+  font-size:14px;
+  letter-spacing:0.22em;
+  color:var(--gold-deep);
+  margin-bottom:18px;
+  font-weight:500;
+}
+.benefit-card h4{
+  font-family:"Noto Serif JP",serif;
+  font-size:18px;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:18px;
+  line-height:1.65;
+  padding-bottom:14px;
+  border-bottom:1px dotted var(--line);
+}
+.benefit-card p{
+  font-size:13px;
+  line-height:1.95;
+  color:var(--ink);
+}
+.benefit-card p strong{color:var(--navy);font-weight:600}
+@media(max-width:860px){
+  .benefits-grid{grid-template-columns:1fr}
+  .benefit-card{border-right:none;border-bottom:1px solid var(--line)}
+  .benefit-card:last-child{border-bottom:none}
+}
+@media(max-width:720px){
+  .mech-grid{grid-template-columns:1fr}
+  .mech-col{border-right:none;border-bottom:1px solid var(--line)}
+  .mech-col:last-child{border-bottom:none}
+}
+
+/* ============ S5: 事例カード(モデルケース) ============ */
+.cases{background:var(--paper-cool)}
+.case-disclaimer{
+  display:inline-block;
+  font-size:11px;
+  letter-spacing:0.12em;
+  color:var(--muted);
+  background:var(--paper-warm);
+  padding:6px 12px;
+  margin-bottom:24px;
+  border:1px dashed var(--line);
+}
+.case-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:24px;
+}
+.case-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:32px 28px;
+  position:relative;
+}
+.case-card .case-tag{
+  display:inline-block;
+  font-size:10px;
+  letter-spacing:0.18em;
+  color:var(--gold-deep);
+  margin-bottom:16px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--gold-soft);
+  font-weight:500;
+}
+.case-card h4{
+  font-family:"Noto Serif JP",serif;
+  font-size:16px;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:12px;
+  line-height:1.65;
+}
+.case-card .quote{
+  font-size:13px;
+  line-height:1.95;
+  color:var(--ink);
+  margin-bottom:18px;
+  font-weight:400;
+}
+.case-card .quote::before{content:"「"}
+.case-card .quote::after{content:"」"}
+.case-card .meta-row{
+  display:flex;
+  justify-content:space-between;
+  font-size:11px;
+  color:var(--muted);
+  padding-top:14px;
+  border-top:1px solid var(--line);
+  letter-spacing:0.05em;
+}
+@media(max-width:860px){.case-grid{grid-template-columns:1fr}}
+
+/* ============ S6: 代表者 / 信念 ============ */
+.founder{background:var(--paper-warm)}
+.founder-grid{
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:64px;
+  align-items:start;
+  margin-top:32px;
+}
+.founder-card{
+  background:var(--navy);
+  color:var(--paper);
+  padding:36px 32px;
+  position:sticky;
+  top:24px;
+}
+.founder-card .role{
+  font-size:11px;
+  letter-spacing:0.22em;
+  color:var(--gold-soft);
+  margin-bottom:14px;
+  font-weight:300;
+}
+.founder-card .name-en{
+  font-family:"Cormorant Garamond",serif;
+  font-size:14px;
+  letter-spacing:0.2em;
+  color:#C8C0AE;
+  margin-bottom:6px;
+  font-weight:300;
+}
+.founder-card .name{
+  font-family:"Noto Serif JP",serif;
+  font-size:24px;
+  font-weight:500;
+  margin-bottom:24px;
+}
+.founder-card .bio{
+  font-size:13px;
+  line-height:1.95;
+  color:#D8D2C4;
+  font-weight:300;
+  border-top:1px solid var(--line-dark);
+  padding-top:20px;
+}
+.founder-card .bio strong{color:var(--gold-soft);font-weight:500}
+.founder-text h3{
+  font-family:"Noto Serif JP",serif;
+  font-size:22px;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:18px;
+  line-height:1.55;
+}
+.founder-text p{
+  font-size:14px;
+  line-height:2.05;
+  color:var(--ink);
+  margin-bottom:18px;
+  font-weight:400;
+}
+.founder-text p.first::first-letter{
+  font-family:"Noto Serif JP",serif;
+  font-size:54px;
+  line-height:0.9;
+  float:left;
+  margin:6px 12px 0 0;
+  color:var(--gold-deep);
+  font-weight:500;
+}
+@media(max-width:860px){
+  .founder-grid{grid-template-columns:1fr;gap:36px}
+  .founder-card{position:static}
+}
+
+/* ============ S7: 価格 ============ */
+.pricing{background:var(--paper)}
+.price-table{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:0;
+  margin-top:32px;
+  border-top:1px solid var(--line);
+}
+.price-col{
+  padding:36px 28px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.price-col:last-child{border-right:none}
+.price-col.featured{background:var(--paper-warm);border-top:3px solid var(--gold)}
+.price-col.featured::before{
+  content:"RECOMMENDED";
+  position:absolute;
+  top:-10px;
+  left:28px;
+  background:var(--gold);
+  color:var(--navy-deep);
+  font-family:"Cormorant Garamond",serif;
+  font-size:10px;
+  letter-spacing:0.2em;
+  padding:4px 10px;
+  font-weight:600;
+}
+.price-col .ptag{
+  font-size:11px;
+  letter-spacing:0.2em;
+  color:var(--gold-deep);
+  margin-bottom:14px;
+  font-weight:500;
+}
+.price-col h4{
+  font-family:"Noto Serif JP",serif;
+  font-size:20px;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:18px;
+  line-height:1.5;
+}
+.price-col .amount{
+  font-family:"Cormorant Garamond",serif;
+  font-size:42px;
+  font-weight:400;
+  color:var(--navy);
+  line-height:1;
+  margin-bottom:6px;
+}
+.price-col .amount .yen{font-size:18px;color:var(--gold-deep);margin-right:4px}
+.price-col .amount .unit{font-size:14px;color:var(--muted);margin-left:8px}
+.price-col .amount .free{color:var(--gold-deep)}
+.price-col .amount-note{
+  font-size:11px;
+  color:var(--muted);
+  margin-bottom:24px;
+  letter-spacing:0.04em;
+}
+.price-col ul{
+  list-style:none;
+  margin-bottom:24px;
+}
+.price-col li{
+  font-size:13px;
+  line-height:1.85;
+  color:var(--ink);
+  padding:8px 0 8px 22px;
+  position:relative;
+  border-bottom:1px solid var(--line);
+}
+.price-col li::before{
+  content:"";
+  position:absolute;
+  left:0;top:14px;
+  width:10px;
+  height:1px;
+  background:var(--gold);
+}
+.price-col li:last-child{border-bottom:none}
+.price-col .plan-intro{
+  font-size:12.5px;
+  color:var(--ink);
+  line-height:1.85;
+  padding:14px 0;
+  margin:0 0 8px 0;
+  border-top:1px dashed var(--line);
+  border-bottom:1px dashed var(--line);
+}
+.price-col .plan-intro strong{
+  color:var(--navy);
+  font-weight:600;
+}
+.price-col .for-whom{
+  font-size:11px;
+  color:var(--muted);
+  letter-spacing:0.06em;
+  padding:14px 16px;
+  background:var(--paper-cool);
+  border-left:2px solid var(--gold-soft);
+  line-height:1.7;
+}
+@media(max-width:860px){
+  .price-table{grid-template-columns:1fr}
+  .price-col{border-right:none}
+}
+
+/* ============ S8: フォーム ============ */
+.form-section{background:var(--navy);color:var(--paper)}
+.form-section .section-title{color:var(--paper)}
+.form-section .section-head{border-bottom-color:var(--line-dark)}
+.form-section .section-lead{color:#D8D2C4}
+.form-wrap{
+  background:var(--paper);
+  color:var(--ink);
+  padding:48px 40px;
+  margin-top:32px;
+  border-top:4px solid var(--gold);
+}
+.form-step-mark{
+  display:inline-block;
+  font-family:"Cormorant Garamond",serif;
+  font-size:12px;
+  letter-spacing:0.22em;
+  color:var(--gold-deep);
+  margin-bottom:8px;
+  font-weight:500;
+}
+.form-wrap h3{
+  font-family:"Noto Serif JP",serif;
+  font-size:22px;
+  font-weight:500;
+  color:var(--navy);
+  margin-bottom:8px;
+}
+.form-wrap .form-lead{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:32px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--line);
+  line-height:1.85;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px 28px;
+}
+.form-row{display:flex;flex-direction:column}
+.form-row.full{grid-column:1/-1}
+label{
+  font-size:12px;
+  font-weight:600;
+  color:var(--navy);
+  margin-bottom:8px;
+  letter-spacing:0.06em;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+label .req{
+  font-size:9px;
+  color:var(--paper);
+  background:var(--gold-deep);
+  padding:2px 6px;
+  letter-spacing:0.1em;
+  border-radius:1px;
+  font-weight:500;
+}
+label .opt{
+  font-size:9px;
+  color:var(--muted);
+  border:1px solid var(--line);
+  padding:2px 6px;
+  letter-spacing:0.1em;
+  font-weight:500;
+}
+input[type="text"],input[type="email"],input[type="tel"],select,textarea{
+  width:100%;
+  border:none;
+  border-bottom:1px solid var(--line);
+  padding:12px 4px;
+  font-size:14px;
+  font-family:inherit;
+  color:var(--ink);
+  background:transparent;
+  transition:border-color 0.2s;
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;
+  border-bottom-color:var(--gold);
+}
+select{
+  background:transparent;
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%238A6A38' stroke-width='1.5' fill='none'/></svg>");
+  background-repeat:no-repeat;
+  background-position:right 6px center;
+  padding-right:24px;
+}
+textarea{
+  border:1px solid var(--line);
+  padding:12px;
+  min-height:96px;
+  resize:vertical;
+  background:var(--paper-cool);
+}
+.form-submit-row{
+  margin-top:32px;
+  padding-top:24px;
+  border-top:1px solid var(--line);
+}
+.form-submit{
+  width:100%;
+  border:none;
+  background:var(--navy);
+  color:var(--paper);
+  padding:20px;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:0.16em;
+  cursor:pointer;
+  border-radius:2px;
+  transition:background 0.2s;
+  font-family:inherit;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+}
+.form-submit:hover{background:var(--navy-deep)}
+.form-submit .arrow-en{font-family:"Cormorant Garamond",serif;font-size:18px;font-weight:300}
+.form-meta{
+  display:flex;
+  justify-content:space-between;
+  margin-top:14px;
+  font-size:11px;
+  color:var(--muted);
+  letter-spacing:0.05em;
+}
+.form-meta a{color:var(--gold-deep)}
+@media(max-width:720px){
+  .form-grid{grid-template-columns:1fr}
+  .form-wrap{padding:32px 24px}
+}
+
+/* ============ FAQ ============ */
+.faq{background:var(--paper-cool)}
+.faq-list{margin-top:24px;border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+  padding:24px 4px;
+  cursor:pointer;
+  font-family:"Noto Serif JP",serif;
+  font-size:15px;
+  font-weight:500;
+  color:var(--navy);
+  line-height:1.7;
+  user-select:none;
+}
+.faq-q .qmark{
+  font-family:"Cormorant Garamond",serif;
+  font-size:22px;
+  color:var(--gold-deep);
+  flex-shrink:0;
+  font-weight:500;
+}
+.faq-q .toggle{
+  margin-left:auto;
+  flex-shrink:0;
+  font-family:"Cormorant Garamond",serif;
+  color:var(--muted);
+  transition:transform 0.3s;
+}
+.faq-item.open .faq-q .toggle{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease;
+}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{
+  padding:0 0 24px 40px;
+  font-size:13px;
+  line-height:2;
+  color:var(--ink);
+}
+
+/* ============ Footer ============ */
+footer{
+  background:var(--navy-deep);
+  color:#A8A192;
+  padding:56px 32px 28px;
+  font-size:12px;
+  letter-spacing:0.05em;
+  line-height:2;
+}
+.footer-inner{
+  max-width:1180px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:48px;
+  padding-bottom:36px;
+  border-bottom:1px solid var(--line-dark);
+}
+.footer-brand .logo-en{
+  font-family:"Cormorant Garamond",serif;
+  font-size:24px;
+  letter-spacing:0.32em;
+  color:var(--paper);
+  margin-bottom:8px;
+  font-weight:500;
+}
+.footer-brand .desc{font-size:12px;line-height:1.95;color:#8A8475;max-width:380px}
+.footer-col h5{
+  font-size:11px;
+  color:var(--gold-soft);
+  letter-spacing:0.18em;
+  margin-bottom:14px;
+  font-weight:500;
+}
+.footer-col p,.footer-col a{font-size:12px;color:#A8A192;text-decoration:none;display:block}
+.footer-col a:hover{color:var(--gold-soft)}
+.footer-bottom{
+  max-width:1180px;
+  margin:0 auto;
+  padding-top:24px;
+  display:flex;
+  justify-content:space-between;
+  font-size:11px;
+  color:#6A6356;
+  letter-spacing:0.08em;
+}
+@media(max-width:720px){
+  .footer-inner{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{flex-direction:column;gap:12px}
+}
+
+
+/* ============ LP Visual Insertions ============ */
+.lp-visual{
+  margin:48px 0 0;
+  position:relative;
+  overflow:hidden;
+  background:transparent;
+}
+.lp-visual img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.lp-visual.photo{
+  background:rgba(255,255,255,0.18);
+}
+.lp-visual.photo img{
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center;
+}
+.lp-visual.diagram{
+  background:#fff;
+  border:1px solid rgba(214,205,184,0.8);
+}
+.lp-visual.diagram img{
+  object-fit:contain;
+}
+.lp-visual.problem-visual{
+  margin:42px 0 0;
+}
+.lp-visual.problem-visual img{
+  border-top:1px solid rgba(168,133,76,0.18);
+  border-bottom:1px solid rgba(168,133,76,0.18);
+}
+.lp-visual.mechanism-diagram{
+  margin-top:40px;
+}
+.lp-visual.benefit-visual,
+.lp-visual.case-visual{
+  margin-bottom:8px;
+}
+.lp-visual.easy-intro-diagram{
+  max-width:980px;
+  margin:42px auto 0;
+}
+.lp-visual.cta-visual{
+  margin:36px 0 32px;
+}
+.lp-visual.cta-visual img{
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center;
+  opacity:0.96;
+}
+.visual-note{
+  margin-top:10px;
+  font-size:11px;
+  letter-spacing:0.08em;
+  color:var(--muted);
+}
+.form-section .visual-note{color:#B8B0A2}
+
+.hero-side{
+  position:relative;
+  min-height:560px;
+  overflow:hidden;
+  border-left:none;
+  padding:300px 28px 0 48px;
+  isolation:isolate;
+}
+.hero-fv-image{
+  position:absolute;
+  top:18px;
+  right:-18px;
+  left:16px;
+  bottom:168px;
+  z-index:-2;
+  margin:0;
+  opacity:0.98;
+  pointer-events:none;
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.94) 12%, #000 28%, #000 100%);
+  mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.94) 12%, #000 28%, #000 100%);
+}
+.hero-fv-image img{
+  position:absolute;
+  top:0;
+  right:0;
+  width:132%;
+  height:auto;
+  max-width:none;
+  filter:saturate(0.96) contrast(1.01);
+}
+.hero-side::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  z-index:-1;
+  background:
+    linear-gradient(90deg, var(--navy) 0%, rgba(10,31,58,0.70) 12%, rgba(10,31,58,0.18) 36%, rgba(10,31,58,0.58) 100%),
+    linear-gradient(180deg, rgba(10,31,58,0.10) 0%, rgba(10,31,58,0.00) 20%, rgba(10,31,58,0.00) 58%, rgba(10,31,58,0.88) 100%);
+  pointer-events:none;
+}
+.hero-side-content{
+  position:relative;
+  z-index:1;
+  text-shadow:0 1px 18px rgba(0,0,0,0.28);
+}
+
+@media(max-width:860px){
+  .hero-side{
+    min-height:auto;
+    padding:220px 0 0;
+    border-top:none;
+  }
+  .hero-fv-image{
+    top:0;
+    left:-8px;
+    right:-8px;
+    bottom:auto;
+    height:214px;
+    opacity:0.96;
+    -webkit-mask-image:linear-gradient(180deg, #000 0%, #000 74%, transparent 100%);
+    mask-image:linear-gradient(180deg, #000 0%, #000 74%, transparent 100%);
+  }
+  .hero-fv-image img{
+    top:0;
+    right:0;
+    width:118%;
+    height:auto;
+  }
+  .hero-side::after{
+    background:
+      linear-gradient(180deg, rgba(10,31,58,0.04) 0%, rgba(10,31,58,0.16) 24%, rgba(10,31,58,0.42) 58%, var(--navy) 84%, var(--navy) 100%);
+  }
+}
+@media(max-width:720px){
+  .lp-visual{margin-top:32px}
+  .lp-visual.photo img,
+  .lp-visual.cta-visual img{
+    aspect-ratio:auto;
+    min-height:auto;
+  }
+  .lp-visual.diagram{
+    margin-left:-4px;
+    margin-right:-4px;
+  }
+  .visual-note{font-size:10px;line-height:1.7}
+}
+
+/* ============ Reveal anim ============ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ============ Floating CTA on mobile ============ */
+.floating-cta{
+  display:none;
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:var(--navy-deep);
+  padding:14px 16px;
+  border-top:2px solid var(--gold);
+  z-index:50;
+  box-shadow:0 -8px 24px rgba(0,0,0,0.25);
+}
+.floating-cta a{
+  display:block;
+  background:var(--gold);
+  color:var(--navy-deep);
+  text-align:center;
+  padding:14px;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-decoration:none;
+  border-radius:2px;
+}
+@media(max-width:720px){.floating-cta{display:block}body{padding-bottom:80px}}
+
+/* スマホ/SNSアプリ内ブラウザ対応：タップ反応・文字入力・改行安定化 */
+.check-item,.faq-q,.btn-primary,.btn-secondary,.footer-col a,.floating-cta a{
+  -webkit-tap-highlight-color:rgba(168,133,76,0.18);
+  touch-action:manipulation;
+}
+.check-item,.faq-q{user-select:none;-webkit-user-select:none}
+.faq-q{cursor:pointer}
+.topbar a{color:var(--paper);text-decoration:none}
+body{line-break:strict;word-break:normal;overflow-wrap:break-word}
+p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:normal;overflow-wrap:break-word}
+@media(max-width:720px){
+  input[type="text"],input[type="email"],input[type="tel"],select,textarea{font-size:16px}
+  .form-meta{display:block;line-height:1.8}
+  .form-meta span{display:block}
+  body.form-active .floating-cta{display:none}
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="lhs"><span>BOND ／ FIRST IMPRESSION CHECK</span></div>
+  <div class="rhs">
+    <span>運営：LBR合同会社</span>
+    <a href="mailto:info@bondtailor.com">info@bondtailor.com</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-meta">
+        <span class="mark">EST. SERVICE №01</span>
+        <span class="divider"></span>
+        <span class="serif-en" style="font-size:11px;letter-spacing:0.2em;color:#C8C0AE">FOR JAPANESE SMB</span>
+      </div>
+      <div class="hero-eyebrow">A Diagnostic Service by BOND</div>
+      <h1>商談前の<em>数秒</em>で、<br>会社は損をしていないか。</h1>
+      <p class="hero-lead">
+        営業担当・面接官・店舗スタッフ・管理職。<br>
+        相手は、名刺を渡される前から見ています。<br>
+        BONDは、社員ひとりひとりの装いを「会社の信用」として整え直すための診断サービスです。<br>
+        <span class="hero-sub-lead">— 必要であれば、社員様向けに<strong>オーダースーツを原価で</strong>整える仕組みまでご案内します。</span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#form">
+          <span>2〜3分のフォーム回答で簡易診断を申し込む</span>
+          <span class="arrow">→</span>
+        </a>
+        <div class="hero-cta-row">
+          <a class="btn-secondary" href="#mechanism">仕組みを先に知りたい</a>
+          <span class="hero-cta-sep">／</span>
+          <a class="btn-secondary" href="#benefits">社員様への価値を見る</a>
+        </div>
+        <div class="hero-note">所要時間：約2〜3分／費用：無料／回答後にレポート返送</div>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <figure class="hero-fv-image">
+        <img src="assets/lp-fv.png" alt="法人向けの身だしなみ改善を表すビジネスチームイメージ" width="1672" height="941" fetchpriority="high" decoding="async">
+      </figure>
+      <div class="hero-side-content">
+        <div class="num">8<span style="font-size:32px;color:#D8D2C4;font-weight:300">秒</span></div>
+        <div class="num-unit">— 第一印象が決まるまで</div>
+        <div class="num-caption">
+          対面の第一印象は、<strong>会って数秒のうちに形成される</strong>と言われています。<br>
+          相手が話を聴く姿勢になるか、警戒を解くか、信頼を寄せるか。<br>
+          その判断のほとんどは、言葉の前に終わっています。
+        </div>
+        <cite>※ Princeton大Willis & Todorov(2006)等、複数の心理学研究で示されている知見。</cite>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<!-- S1: 問題提起 -->
+<section class="problem">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en">№ 01</div>
+      <div class="meta serif-en">THE PROBLEM</div>
+      <h2 class="section-title">服装は個人の問題ではなく、<br>会社の機会損失の問題である。</h2>
+      <p class="section-lead">
+        営業の決裁、採用の入社意向、店舗の客単価、契約の継続率。<br>
+        これらは商品力や提案内容より前に、<strong>「この人に任せて大丈夫か」</strong>という瞬間的な判断に左右されています。担当者の佇まいが揃っていない会社は、本来取れていた数字を取り損ねている可能性があります。
+      </p>
+    </div>
+
+    <blockquote class="problem-quote">
+      営業マンの提案内容は完璧だった。<br>
+      ただ、シャツの襟が浮いていて、ベルトがスーツに合っていなかった。<br>
+      なぜか、稟議は通らなかった。
+      <span class="by">— 中堅メーカー 購買部長／50代</span>
+    </blockquote>
+
+    <figure class="lp-visual photo problem-visual">
+      <img src="assets/lp-2.png" alt="社員の見え方の違いが会社の印象に影響することを示す比較イメージ" width="1672" height="941" loading="lazy" decoding="async">
+    </figure>
+
+    <div class="problem-grid">
+      <div class="problem-cell">
+        <div class="stat">数<span class="unit">秒</span></div>
+        <div class="stat-label">第一印象の確定時間</div>
+        <div class="stat-desc">人は対面で会った相手の信頼性・有能性を、ごく短時間のうちに判定すると報告されている。商談前半の温度はここで決まる。</div>
+        <cite>Willis & Todorov (2006), Psychological Science</cite>
+      </div>
+      <div class="problem-cell">
+        <div class="stat">55<span class="unit">%</span></div>
+        <div class="stat-label">非言語情報の比重</div>
+        <div class="stat-desc">対面コミュニケーションにおいて、見た目・表情・身振り等の視覚情報が伝達に占める割合。話す内容より先に届く。</div>
+        <cite>Mehrabian (1971) ／ いわゆる「メラビアンの法則」</cite>
+      </div>
+      <div class="problem-cell">
+        <div class="stat">N<span class="unit">／A</span></div>
+        <div class="stat-label">あなたの会社の損失額</div>
+        <div class="stat-desc">商談継続率・採用辞退率・店舗客単価のうち、第一印象が影響している可能性のある割合は通常測定されない。だからこそ気づかれない。</div>
+        <cite>BOND編集部</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S2: セルフチェック -->
+<section class="checklist">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en">№ 02</div>
+      <div class="meta serif-en">SELF CHECK ／ 60 SECONDS</div>
+      <h2 class="section-title">まず、自社の状態を確かめてください。</h2>
+      <p class="section-lead">
+        ボックスをタップしながら読み進めてください。<br>
+        当てはまる項目が3つを超えた段階で、社員の装いが「会社の信用」を毀損している可能性があります。
+      </p>
+    </div>
+
+    <div class="check-grid" id="checkGrid">
+      <div class="check-item"><span class="num">01</span><span class="check-box"></span><span>営業担当者ごとに、清潔感・サイズ感・佇まいに差がある</span></div>
+      <div class="check-item"><span class="num">02</span><span class="check-box"></span><span>面接官の装いが、求人広告で謳う会社像と合っていない</span></div>
+      <div class="check-item"><span class="num">03</span><span class="check-box"></span><span>若手社員が「頼りない」と取引先に見られた経験がある</span></div>
+      <div class="check-item"><span class="num">04</span><span class="check-box"></span><span>商談の前半で、相手の警戒が解けないと感じることがある</span></div>
+      <div class="check-item"><span class="num">05</span><span class="check-box"></span><span>管理職の装いに、会社としての基準が反映されていない</span></div>
+      <div class="check-item"><span class="num">06</span><span class="check-box"></span><span>店舗スタッフ間で、立ち姿・色味・質感が揃っていない</span></div>
+      <div class="check-item"><span class="num">07</span><span class="check-box"></span><span>身だしなみ規定はあるが、運用が個人任せになっている</span></div>
+      <div class="check-item"><span class="num">08</span><span class="check-box"></span><span>採用広報の写真と、実際の社員の印象に開きがある</span></div>
+      <div class="check-item"><span class="num">09</span><span class="check-box"></span><span>社員のスーツ・装いの予算的な負担を、配慮できていない</span></div>
+      <div class="check-item"><span class="num">10</span><span class="check-box"></span><span>福利厚生として「装い」を整える発想を持ったことがない</span></div>
+    </div>
+
+    <div class="check-counter">
+      <div><div class="label">CHECKED</div><div class="count" id="checkCount">0</div></div>
+      <div class="verdict" id="checkVerdict">タップしながら、自社の状態を確かめてください。</div>
+      <a class="btn-primary" href="#form" style="background:var(--gold);">
+        <span>診断を受ける</span><span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- S3: フロー / 構造 -->
+<section class="structure" id="structure">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en" style="color:var(--gold-soft)">№ 03</div>
+      <div class="meta serif-en" style="color:#9A917F">DIAGNOSTIC FLOW</div>
+      <h2 class="section-title">押し売りはしません。<br>段階を踏んで進みます。</h2>
+      <p class="section-lead">
+        BONDは、いきなりスーツを売る会社ではありません。まず無料で現状を整理し、必要があれば有料診断、必要があれば導入相談、と段階を分けています。途中で止めて構いません。
+      </p>
+    </div>
+    <div class="structure-flow">
+      <div class="flow-step">
+        <div class="step-num">STEP 01 ／ FREE</div>
+        <h4>2〜3分の<br>簡易診断フォーム</h4>
+        <p>11項目の選択式中心のフォームに回答。所要時間は約2〜3分。費用は無料です。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">STEP 02 ／ FREE</div>
+        <h4>業種別の<br>簡易整理レポート</h4>
+        <p>ご回答内容に応じて、業種・対象別の整理レポートを返送。優先論点を絞り込みます。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">STEP 03 ／ OPTION</div>
+        <h4>有料診断ライト<br>または導入相談</h4>
+        <p>必要に応じて、より詳細な有料診断（5万円〜）か、無料の導入相談を選択いただけます。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">STEP 04 ／ OPTION</div>
+        <h4>オーダースーツ<br>導入の開始</h4>
+        <p>仕組みにご納得いただけた場合、社員様が原価でオーダースーツを整える運用を開始します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S4: BONDの仕組み(=信頼担保) -->
+<section class="mechanism" id="mechanism">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en">№ 04</div>
+      <div class="meta serif-en">THE MECHANISM</div>
+      <h2 class="section-title">同等グレードの生地・縫製仕様でも、<br>価格が1.5倍以上違う業界。</h2>
+      <p class="section-lead">
+        オーダースーツの世界には、「適正価格」という概念が、ほぼ存在していません。<br>
+        同等グレードの生地・縫製仕様で仕立てた場合でも、<strong>どのお店で買うかによって、提供価格に1.5倍以上の差が出ることがあります</strong>。お店のブランディング、立地、内装、人件費。商品ではなく「お店」に乗っているコストが、社員様の一着の値段を膨らませています。<br><br>
+        BONDが行っているのは、その<strong>「お店」に乗るコストを抑えること</strong>。仕入れ・縫製に関する業界ルートを活用しながら、最終的な提供を、会社窓口（LBR）から社員様向けに整える構造です。
+      </p>
+    </div>
+
+    <figure class="lp-visual diagram mechanism-diagram">
+      <img src="assets/lp-3.png" alt="会社導入から社員利用、見た目改善、採用営業企業イメージ向上までの流れ" width="1672" height="941" loading="lazy" decoding="async">
+    </figure>
+
+    <div class="mech-grid">
+      <div class="mech-col">
+        <h4>一般的な経路</h4>
+        <ol class="mech-chain">
+          <li><span class="pill">生地メーカー</span></li>
+          <li><span class="pill">商社</span></li>
+          <li><span class="pill">縫製工場</span></li>
+          <li><span class="pill struck">オーダースーツ店（小売）</span><span class="mech-aside">ブランディング・立地・内装・人件費が乗る</span></li>
+          <li><span class="pill">購入者（社員）</span></li>
+        </ol>
+        <div class="mech-result" style="border-left-color:var(--crimson);background:rgba(122,46,46,0.08)">
+          <strong>結果：</strong>同じ生地・同じ縫製工場でも、<strong>店舗によって1.5倍以上</strong>の価格差。<br>「適正価格」が存在しない構造の中で、社員様の手元に届きます。
+        </div>
+      </div>
+
+      <div class="mech-col">
+        <h4>BONDの経路</h4>
+        <ol class="mech-chain">
+          <li><span class="pill">生地メーカー</span></li>
+          <li><span class="pill">商社</span></li>
+          <li><span class="pill">縫製工場</span></li>
+          <li><span class="pill bond">LBR合同会社（BOND）</span><span class="mech-aside">会社窓口で受け取り、社員様へ</span></li>
+          <li><span class="pill">購入者（社員）</span></li>
+        </ol>
+        <div class="mech-result">
+          <strong>結果：</strong>業界共通の経路を経ながら、<strong>「お店」の階を抜く</strong>ことで、<br>同じ品質を、原価で社員様にお届けできます。
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:32px;font-size:13px;color:var(--muted);line-height:1.95;max-width:780px">
+      ※ 生地のグレード・縫製仕様により価格は変動します。導入相談時に、対象人数・希望仕様に応じた具体的な価格レンジをご提示します。<br>
+      ※ 運営実費（配送・管理等）は別途加算されます。<br>
+      ※ <strong>三方よし</strong>の考え方で運営しています。社員様にとっては福利厚生として、会社にとっては経営投資として、業界にとっては適正価格の選択肢として、無理のない仕組みであることを大切にしています。
+    </p>
+  </div>
+</section>
+
+<!-- S4b: 社員様への3つの価値 -->
+<section class="benefits" id="benefits">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en">№ 04 ／ B</div>
+      <div class="meta serif-en">VALUE FOR EMPLOYEES</div>
+      <h2 class="section-title">価格だけが、価値ではありません。</h2>
+      <p class="section-lead">
+        社員様にとって、オーダースーツの導入には「価格」以外にも、<br>これまで個人で抱えていたいくつかの負担があります。BONDは、それを会社単位で引き受け直します。
+      </p>
+    </div>
+
+    <figure class="lp-visual photo benefit-visual">
+      <img src="assets/lp-4.png" alt="導入後に社員の身だしなみが整ったビジネスシーン" width="1672" height="941" loading="lazy" decoding="async">
+    </figure>
+
+    <div class="benefits-grid">
+      <article class="benefit-card">
+        <div class="benefit-num serif-en">01</div>
+        <h4>「どこで作ればいいか<br>分からない」を解決</h4>
+        <p>初めてオーダースーツを作る社員様にとって、最大の壁は店選びです。価格帯、ブランドの違い、店ごとの提案力。BONDでは、会社が窓口になることで、<strong>社員様は店を探す必要がありません</strong>。</p>
+      </article>
+
+      <article class="benefit-card">
+        <div class="benefit-num serif-en">02</div>
+        <h4>買いに行く時間と<br>労力を、削減する</h4>
+        <p>仕事の合間に店舗を回り、採寸の時間を取り、仮縫いに通う。これまで個人で抱えていた時間と労力を、<strong>会社の仕組みとしてまとめて整える</strong>ことで、社員様の負担を最小限にします。</p>
+      </article>
+
+      <article class="benefit-card">
+        <div class="benefit-num serif-en">03</div>
+        <h4>同じ予算で、<br>ワンランク上の一着を</h4>
+        <p>個人購入では、予算の都合で「結局、安い生地でしか作れない」というケースが多くあります。BONDなら、<strong>同じ予算でワンランク上の生地・仕様</strong>を選ぶことができ、装いの完成度が一段引き上がります。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- S5: 業種別モデルケース -->
+<section class="cases">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en">№ 05</div>
+      <div class="meta serif-en">MODEL CASES</div>
+      <h2 class="section-title">こういう会社で、整え直しが効きます。</h2>
+      <p class="section-lead">
+        以下は、BONDが想定している業種別の典型的な状態と、整え直しによって変化が期待できるポイントです。<br>
+        実際の効果は、対象者・人数・運用方法によって変動します。
+      </p>
+      <span class="case-disclaimer">※ 以下は実在企業ではなく、業種別の典型シナリオに基づくモデルケースです。</span>
+    </div>
+
+    <figure class="lp-visual photo case-visual">
+      <img src="assets/lp-5.png" alt="身だしなみ改善が採用営業企業イメージに好影響を与えるビジネスシーン" width="1672" height="941" loading="lazy" decoding="async">
+    </figure>
+
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="case-tag">CASE 01 ／ 営業会社</div>
+        <h4>商談前半で、信頼を取りきれていなかった。</h4>
+        <p class="quote">提案資料は社内でも評価が高かったのに、初回商談から二回目につながる比率が頭打ちだった。試しに営業3名の装いを揃えたところ、相手の話を聴く姿勢が、最初の数分で明らかに変わった。</p>
+        <div class="meta-row"><span>BtoB営業 ／ 30名規模</span><span>変化：商談継続感</span></div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">CASE 02 ／ 人材派遣</div>
+        <h4>派遣先と登録者、双方の安心感に差が出ていた。</h4>
+        <p class="quote">登録面談で「この人に任せて大丈夫か」と見られ、派遣先訪問でも「この会社で大丈夫か」と見られる。営業とコーディネーターの装いの基準を作ったところ、契約更新の打診時の話の入りが軽くなった。</p>
+        <div class="meta-row"><span>派遣・紹介 ／ 50名規模</span><span>変化：安心感の伝達</span></div>
+      </div>
+      <div class="case-card">
+        <div class="case-tag">CASE 03 ／ 不動産</div>
+        <h4>高額契約に「ふさわしさ」が足りなかった。</h4>
+        <p class="quote">3,000万円超の物件を扱う場面で、20代の若手担当者が年齢ギャップで苦戦していた。サイズ感と色味の基準を1段引き上げたところ、内見同行から契約までの空気が変わったと現場が言っている。</p>
+        <div class="meta-row"><span>仲介・売買 ／ 20名規模</span><span>変化：年齢ギャップの補正</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S6: 代表者・信念 -->
+<section class="founder">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en">№ 06</div>
+      <div class="meta serif-en">FOUNDER'S NOTE</div>
+      <h2 class="section-title">なぜ、私たちはこの仕事をしているか。</h2>
+    </div>
+
+    <div class="founder-grid">
+      <aside class="founder-card">
+        <div class="role">FOUNDER ／ LBR合同会社</div>
+        <div class="name-en">BOND</div>
+        <div class="name">運営代表</div>
+        <div class="bio">
+          オーダースーツの仕事を、<strong>10年以上</strong>続けてきました。<br><br>
+          ただし、これまでお作りしてきたのは、すべて<strong>個人のお客様のため</strong>のスーツです。法人のお客様に向けてサービスを提供するのは、BONDが初めての挑戦になります。<br><br>
+          スーツそのものについては、生地の選び方、採寸、縫製の依頼、お直しの判断まで、十年余りの蓄積があります。その経験と知識を、これからは<strong>「組織として一流に整えたい」</strong>と願う会社様のために、お役立ていただきたいと考えています。
+        </div>
+      </aside>
+
+      <div class="founder-text">
+        <h3>個人のお客様にお作りしてきた一着を、<br>こんどは「組織を一流に整える」ために。</h3>
+        <p class="first">これまで十年余り、個人のお客様にスーツをお作りしてきました。商談前夜に駆け込んでこられる営業の方、独立を決めた方の一着、節目を迎える方への贈り物。一人ひとりにお仕立てする中で、装いが整うことで、その方の<strong>仕事の入り方そのものが変わっていく</strong>のを、何度も目にしてきました。</p>
+        <p>同時に、ずっと感じていたことがあります。本来、いちばん装いを整える必要があるのは、<strong>「会社を背負って外に出ていく社員の方々」</strong>ではないか、と。商談、面接、店舗、契約。会社の信用が試される場面は、社員個人の装いに支えられています。けれど、それを個人の予算と判断に任せきりの会社が、あまりにも多い。</p>
+        <p>BONDは、その仕事を、会社単位で引き受け直すために始めました。<strong>売り手よし、買い手よし、世間よし</strong>。社員様にとっては福利厚生として、会社にとっては経営投資として、業界にとっては健全な価格として。三方が成り立つ提供のしかたを目指しています。</p>
+        <p>診断は、その入り口です。買っていただく前に、まず御社の現状を整理させてください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S7: 価格 -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en">№ 07</div>
+      <div class="meta serif-en">PRICING</div>
+      <h2 class="section-title">価格と、含まれるもの。</h2>
+      <p class="section-lead">
+        まず無料の簡易診断から始めてください。途中で止めて構いません。<br>
+        以下は、その先の選択肢です。
+      </p>
+    </div>
+
+    <div class="price-table">
+      <div class="price-col">
+        <div class="ptag">PLAN A</div>
+        <h4>無料<br>簡易診断</h4>
+        <div class="amount"><span class="free">無料</span></div>
+        <div class="amount-note">所要時間：約2〜3分／返送：1〜3営業日</div>
+        <p class="plan-intro"><strong>フォーム回答をもとに</strong>、会社としての見え方・身だしなみ課題を整理します。</p>
+        <ul>
+          <li>12項目のフォーム回答（うち電話番号と気になっていることは任意）</li>
+          <li>業種別（営業／派遣／不動産 等）の整理レポート返送</li>
+          <li>御社の状況に近い「パターン」の絞り込み</li>
+          <li>次のステップ（有料診断 ／ 導入相談）の提示</li>
+        </ul>
+        <div class="for-whom">まずは現状を客観的に見たい方／導入の前提を作りたい方</div>
+      </div>
+
+      <div class="price-col featured" id="paid-diagnosis">
+        <div class="ptag">PLAN B</div>
+        <h4>有料診断ライト</h4>
+        <div class="amount"><span class="yen">¥</span>50,000<span class="unit">／5名まで</span></div>
+        <div class="amount-note">6名以上は1名追加につき ¥10,000（いずれも税別）</div>
+        <p class="plan-intro"><strong>写真・面談をもとに</strong>、対象者別の第一印象・清潔感・サイズ感・統一感を確認し、社内基準と改善優先順位まで作ります。</p>
+        <ul>
+          <li>追加ヒアリング（30分・オンライン可）</li>
+          <li>対象者ごとの整理（第一印象 / 清潔感 / サイズ感 / 統一感）</li>
+          <li>御社の業種・規模に合わせた装いの推奨レンジ提示</li>
+          <li>御社向けの身だしなみ基準たたき台（例外項目／推奨項目／場面別運用）</li>
+          <li>3ヶ月の改善ロードマップ（Phase 1〜3）</li>
+          <li>納品PDF（8セクション構成）</li>
+          <li>納品後30日間のメール質疑応答</li>
+        </ul>
+        <div class="for-whom">具体的に何から手を付けるかを決めたい方／社内での説得材料が欲しい方</div>
+      </div>
+
+      <div class="price-col" id="consultation">
+        <div class="ptag">PLAN C</div>
+        <h4>BOND<br>導入相談</h4>
+        <div class="amount"><span class="free">無料</span></div>
+        <div class="amount-note">所要時間：30分／オンライン可</div>
+        <ul>
+          <li>仕組みの詳細説明（仕入れ・縫製ルートと小売コストを抑える構造）</li>
+          <li>対象人数・運用方法の整理</li>
+          <li>福利厚生 / 営業投資 / 採用投資としての位置づけ確認</li>
+          <li>個別見積</li>
+        </ul>
+        <div class="for-whom">仕組みに納得した上で、導入を具体的に検討したい方</div>
+      </div>
+    </div>
+
+    <figure class="lp-visual diagram easy-intro-diagram">
+      <img src="assets/lp-6.png" alt="初期導入のみ月額0円で始めやすい法人向け導入設計の説明図" width="1448" height="1086" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<!-- S8: フォーム -->
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en" style="color:var(--gold-soft)">№ 08</div>
+      <div class="meta serif-en" style="color:#9A917F">2-MINUTE DIAGNOSTIC FORM</div>
+      <h2 class="section-title">2〜3分の簡易診断フォーム。</h2>
+      <p class="section-lead">
+        以下にご回答ください。<br>
+        所要時間は約2〜3分。送信後、業種別の整理レポートを1〜3営業日でお送りします。
+      </p>
+    </div>
+
+    <figure class="lp-visual photo cta-visual">
+      <img src="assets/lp-7.png" alt="法人担当者が安心して導入相談できる落ち着いた相談シーン" width="1672" height="941" loading="lazy" decoding="async">
+    </figure>
+
+    <div class="form-wrap">
+      <div class="form-step-mark">FORM ／ STEP 01</div>
+      <h3>御社の現状について教えてください</h3>
+      <p class="form-lead">送信内容は BOND 担当者が確認し、info@bondtailor.com よりレポート・ご連絡を返送いたします。記載いただいた情報は、レポート作成および本件のご連絡以外には使用しません。</p>
+
+      <form id="bondForm" class="form-grid" action="https://my156p.com/p/r/QVaScdAi" method="POST" accept-charset="UTF-8">
+        <noscript>
+          <p style="background:#FBF1E8;border-left:3px solid #C0392B;padding:14px 18px;margin-bottom:24px;font-size:13px;line-height:1.85;color:#2A2620">
+            このフォームの送信にはJavaScriptが必要です。うまく送信できない場合は、お手数ですが info@bondtailor.com まで直接ご連絡ください。
+          </p>
+        </noscript>
+        <!-- 連絡先 -->
+        <div class="form-row">
+          <label>会社名<span class="req">必須</span></label>
+          <input type="text" name="会社名" required>
+        </div>
+        <div class="form-row">
+          <label>お名前<span class="req">必須</span></label>
+          <input type="text" name="お名前" required>
+        </div>
+        <div class="form-row">
+          <label>メールアドレス<span class="req">必須</span></label>
+          <input type="email" name="メールアドレス" required>
+        </div>
+        <div class="form-row">
+          <label>電話番号<span class="opt">任意</span></label>
+          <input type="tel" name="電話番号">
+        </div>
+
+        <!-- 会社情報 -->
+        <div class="form-row">
+          <label>業種<span class="req">必須</span></label>
+          <select name="業種" required>
+            <option value="">選択してください</option>
+            <option>営業会社（BtoB営業中心）</option>
+            <option>営業会社（BtoC営業中心）</option>
+            <option>人材派遣・紹介会社</option>
+            <option>不動産会社</option>
+            <option>士業・コンサルティング</option>
+            <option>金融・保険</option>
+            <option>店舗・小売・サービス業</option>
+            <option>その他</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>社員数<span class="req">必須</span></label>
+          <select name="社員数" required>
+            <option value="">選択してください</option>
+            <option>1〜10名</option>
+            <option>11〜30名</option>
+            <option>31〜100名</option>
+            <option>101〜300名</option>
+            <option>301名以上</option>
+          </select>
+        </div>
+
+        <!-- 診断 -->
+        <div class="form-row">
+          <label>診断したい対象<span class="req">必須</span></label>
+          <select name="診断したい対象" required>
+            <option value="">選択してください</option>
+            <option>営業担当者</option>
+            <option>面接官</option>
+            <option>管理職</option>
+            <option>店舗スタッフ</option>
+            <option>役員・代表</option>
+            <option>社員全体</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>一番気になる場面<span class="req">必須</span></label>
+          <select name="一番気になる場面" required>
+            <option value="">選択してください</option>
+            <option>初回商談</option>
+            <option>採用面接</option>
+            <option>店舗接客</option>
+            <option>管理職の見え方</option>
+            <option>社員全体の統一感</option>
+            <option>取引先・パートナー対応</option>
+            <option>採用広報・求人</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>服装・身だしなみルール<span class="req">必須</span></label>
+          <select name="服装・身だしなみルール" required>
+            <option value="">選択してください</option>
+            <option>明文化された規定があり、運用されている</option>
+            <option>規定はあるが、運用は個人任せになっている</option>
+            <option>規定はないが、暗黙の基準で運用している</option>
+            <option>規定も基準もなく、完全に個人任せ</option>
+            <option>わからない</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>まず整えるなら<span class="req">必須</span></label>
+          <select name="まず整えるなら" required>
+            <option value="">選択してください</option>
+            <option>営業担当者から</option>
+            <option>面接官から</option>
+            <option>管理職から</option>
+            <option>店舗スタッフから</option>
+            <option>全社員一斉</option>
+            <option>まだわからない</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>原価オーダースーツ制度への関心<span class="req">必須</span></label>
+          <select name="原価オーダースーツ制度への関心" required>
+            <option value="">選択してください</option>
+            <option>具体的に検討したい</option>
+            <option>仕組みは知りたい</option>
+            <option>まずは診断だけ</option>
+            <option>関心なし</option>
+          </select>
+        </div>
+        <div class="form-row full">
+          <label>具体的に気になっていること<span class="opt">任意・可能な範囲で</span></label>
+          <textarea name="具体的に気になっていること" placeholder="例：若手営業の商談継続率が落ちている／面接で内定辞退が増えている、など。お困りの場面を1〜3行でお書きください。未定の場合は「特になし」でも問題ありません。"></textarea>
+        </div>
+
+        <div class="form-row full form-submit-row">
+          <button type="submit" class="form-submit">
+            <span>簡易診断を申し込む</span><span class="arrow-en">—</span><span>SEND</span>
+          </button>
+          <div class="form-meta">
+            <span>※ 送信内容は BOND 担当者が確認し、info@bondtailor.com よりご連絡します</span>
+            <span>1〜3営業日でレポート返送</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="num serif-en">№ 09</div>
+      <div class="meta serif-en">QUESTIONS &amp; ANSWERS</div>
+      <h2 class="section-title">よくいただくご質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q.</span><span>診断のあとに、必ず購入を求められますか？</span><span class="toggle">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">求めません。無料簡易診断は、文字通り無料の現状整理です。レポート返送をもって一度完了とし、その後の有料診断ライト・BOND導入相談への移行は御社の判断でお選びいただけます。こちらからしつこい営業電話を行うことはありません。必要に応じて、レポート内容に関する確認や次の選択肢をご案内する場合があります。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q.</span><span>本当に原価で出せるのですか？</span><span class="toggle">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">運営代表が個人のお客様にオーダースーツをお作りしてきた10年以上の経験をもとに、仕入れ・縫製に関する業界ルートを活用しています。一般経路では生地メーカー → 商社 → 縫製工場 → オーダースーツ店（小売）と流れますが、BONDではこの最終段の小売店舗にかかるブランディング・立地・人件費を抑える構造です。これにより、同等グレードの生地・縫製仕様でも、社員様が納得しやすい価格で整えられる選択肢を用意できます。具体的な価格は生地グレード・縫製仕様によって変動するため、導入相談時にご提示します。「売り手よし、買い手よし、世間よし」、三方が成り立つ提供のしかたを目指しています。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q.</span><span>社員に強制になりませんか？</span><span class="toggle">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">強制を推奨していません。BONDは、福利厚生・営業投資・採用投資のいずれかとして、社員に「選択肢として提示する」運用を推奨しています。導入相談時に、強制ではない形での運用設計についてもご案内します。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q.</span><span>個人を否定する診断結果になりませんか？</span><span class="toggle">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">なりません。BONDの診断は、個人の外見をスコア化したり優劣をつけたりするものではなく、会社としての見え方の基準づくりを目的としています。レポートにも「個人を否定・評価する資料ではない」と明記しています。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q.</span><span>女性社員も対象ですか？</span><span class="toggle">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">対応可能です。診断は性別を問わず行い、オーダースーツのご提供についても、メンズ・レディース両方に対応しています。具体的な仕様・選択肢は、導入相談時にご案内します。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q.</span><span>対応エリアはどこまでですか？</span><span class="toggle">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">全国対応しています。無料簡易診断・有料診断ライトはオンラインで完結します。BONDの導入についても、全国どちらの会社様にもご対応可能です。導入相談時に、御社の所在地・対象人数に応じた進め方をご案内します。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q.</span><span>電話番号と「気になっていること」が任意なのはなぜですか？</span><span class="toggle">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">メールアドレスでご連絡が成立するため、電話番号は任意としています。「気になっていること」も任意です。BtoBのお問い合わせでは、お困りごとがまだ言語化できていない段階でもお気軽にお送りいただきたいため、「特になし」「未定」とのご記入でも問題ありません。お電話でのご相談をご希望の場合は、電話番号欄にご記入いただければ、こちらからお電話いたします。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="qmark">Q.</span><span>送信後、すぐにレポートは届きますか？</span><span class="toggle">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">自動返信ではなく、BOND担当者がご回答内容を確認した上で、御社の業種・状況に合わせた整理レポートをお送りします。1〜3営業日以内に info@bondtailor.com より返送いたします。テンプレートをそのままお送りするのではなく、ご回答に応じて該当パターンを特定してからお送りするため、少しお時間をいただいております。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-en">BOND</div>
+      <div class="desc">会社の第一印象を、装いから整え直すための診断・導入サービス。運営：LBR合同会社。個人のお客様向けにオーダースーツをお作りしてきた10年以上の経験を、「組織として一流に」整えたい会社様のために展開しています。</div>
+    </div>
+    <div class="footer-col">
+      <h5>SERVICES</h5>
+      <a href="#form">無料簡易診断</a>
+      <a href="#paid-diagnosis">有料診断ライト</a>
+      <a href="#consultation">導入相談</a>
+    </div>
+    <div class="footer-col">
+      <h5>CONTACT</h5>
+      <p><a href="mailto:info@bondtailor.com">info@bondtailor.com</a></p>
+      <p>運営：LBR合同会社</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© BOND ／ LBR LLC. All rights reserved.</span>
+    <span class="serif-en" style="letter-spacing:0.2em;">FIRST IMPRESSION, REDEFINED.</span>
+  </div>
+</footer>
+
+<!-- Floating CTA mobile -->
+<div class="floating-cta">
+  <a href="#form">2〜3分のフォーム回答で簡易診断を申し込む →</a>
+</div>
+
+<script>
+// スマホ/SNSアプリ内ブラウザでもタップ反応を安定させる共通処理
+function bindActivation(el, handler){
+  let touched=false;
+  el.addEventListener('touchend', function(e){
+    e.preventDefault();
+    handler(e);
+    touched=true;
+    window.setTimeout(function(){touched=false;}, 350);
+  }, {passive:false});
+  el.addEventListener('click', function(e){
+    if(touched) return;
+    handler(e);
+  });
+  el.addEventListener('keydown', function(e){
+    if(e.key==='Enter' || e.key===' '){
+      e.preventDefault();
+      handler(e);
+    }
+  });
+}
+
+// セルフチェック
+const items=document.querySelectorAll('.check-item');
+const counter=document.getElementById('checkCount');
+const verdict=document.getElementById('checkVerdict');
+function updateCount(){
+  const n=document.querySelectorAll('.check-item.checked').length;
+  if(counter) counter.textContent=n;
+  if(!verdict) return;
+  if(n===0)verdict.textContent='タップしながら、自社の状態を確かめてください。';
+  else if(n<=2)verdict.textContent='まだ大きな問題は見えません。ただし、気になる項目があれば早めの整理をおすすめします。';
+  else if(n<=5)verdict.textContent='3つ以上当てはまっています。社員の装いが「会社の信用」に影響している可能性が高い状態です。';
+  else if(n<=8)verdict.textContent='6つ以上当てはまっています。信頼形成の入り口で、取りこぼしが継続している可能性があります。';
+  else verdict.textContent='極めて多くの項目が該当しています。会社としての見え方の基準づくりを、優先的に整理する価値があります。';
+}
+items.forEach(function(it){
+  it.setAttribute('role','button');
+  it.setAttribute('tabindex','0');
+  it.setAttribute('aria-pressed','false');
+  bindActivation(it, function(){
+    it.classList.toggle('checked');
+    it.setAttribute('aria-pressed', it.classList.contains('checked') ? 'true' : 'false');
+    updateCount();
+  });
+});
+
+// FAQ（スマホのアプリ内ブラウザでも開閉しやすくする）
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.setAttribute('role','button');
+  q.setAttribute('tabindex','0');
+  q.setAttribute('aria-expanded','false');
+  bindActivation(q, function(){
+    const item=q.parentElement;
+    if(!item) return;
+    item.classList.toggle('open');
+    q.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+  });
+});
+
+// Reveal on scroll（古い/制限のあるアプリ内ブラウザでは通常表示にフォールバック）
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:0.1});
+  document.querySelectorAll('section').forEach(function(s){
+    s.classList.add('reveal');
+    io.observe(s);
+  });
+}else{
+  document.querySelectorAll('section').forEach(function(s){s.classList.add('visible');});
+}
+
+// Form: MyASPへの送信ロジック
+// LP上の日本語name属性のフォーム入力を、MyASPが受け取れる data[User][...] 形式に変換して送信する。
+// 業種・社員数等の診断回答は、1つの文章にまとめて data[User][free2] に格納する。
+(function(){
+  const form = document.getElementById('bondForm');
+  if(!form) return;
+
+  // スマホ入力中は下部固定CTAを隠して、送信ボタンの押しづらさを防ぐ
+  form.addEventListener('focusin', function(){document.body.classList.add('form-active');});
+  form.addEventListener('focusout', function(){
+    window.setTimeout(function(){
+      if(!form.contains(document.activeElement)) document.body.classList.remove('form-active');
+    }, 150);
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const get = (name) => {
+      const el = form.querySelector('[name="' + name + '"]');
+      return el ? (el.value || '').trim() : '';
+    };
+
+    // 連絡先4項目
+    const company = get('会社名');
+    const name1   = get('お名前');
+    const mail    = get('メールアドレス');
+    const tel     = get('電話番号');
+
+    // 診断回答を1つの文章にまとめて free2 に
+    const fields = [
+      ['業種', get('業種')],
+      ['社員数', get('社員数')],
+      ['診断したい対象', get('診断したい対象')],
+      ['一番気になる場面', get('一番気になる場面')],
+      ['服装・身だしなみルール', get('服装・身だしなみルール')],
+      ['まず整えるなら', get('まず整えるなら')],
+      ['原価オーダースーツ制度への関心', get('原価オーダースーツ制度への関心')],
+      ['具体的に気になっていること', get('具体的に気になっていること')]
+    ];
+    const free2 = fields
+      .filter(([k,v]) => v !== '')
+      .map(([k,v]) => '【' + k + '】' + v)
+      .join('\n');
+
+    // 送信用フォームを新規構築して MyASP に POST
+    const myaspForm = document.createElement('form');
+    myaspForm.method = 'POST';
+    myaspForm.action = form.action;
+    myaspForm.acceptCharset = 'UTF-8';
+    myaspForm.style.display = 'none';
+
+    const append = (name, value) => {
+      const inp = document.createElement('input');
+      inp.type = 'hidden';
+      inp.name = name;
+      inp.value = value;
+      myaspForm.appendChild(inp);
+    };
+
+    append('data[User][company]', company);
+    append('data[User][name1]',   name1);
+    append('data[User][mail]',    mail);
+    append('data[User][tel]',     tel);
+    append('data[User][free2]',   free2);
+
+    document.body.appendChild(myaspForm);
+    myaspForm.submit();
+  });
+})();
+</script>
+</body>
+</html>
