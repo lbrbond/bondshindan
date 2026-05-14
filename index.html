@@ -1787,34 +1787,35 @@ p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:n
       <p class="form-lead">送信内容は BOND 担当者が確認し、info@bondtailor.com よりレポート・ご連絡を返送いたします。記載いただいた情報は、レポート作成および本件のご連絡以外には使用しません。</p>
 
       <form id="bondForm" class="form-grid" action="https://my156p.com/p/r/Xd86rE4P" method="POST" accept-charset="UTF-8">
-        <input type="hidden" name="data[User][free2]" value="MyASP連携テスト">
+        <input type="hidden" name="_method" value="POST">
+        <input type="hidden" name="data[User][free2]" id="Userfree2" value="">
         <noscript>
           <p style="background:#FBF1E8;border-left:3px solid #C0392B;padding:14px 18px;margin-bottom:24px;font-size:13px;line-height:1.85;color:#2A2620">
-            JavaScriptが無効の場合、診断詳細の一部が送信されない可能性があります。うまく送信できない場合は、お手数ですが info@bondtailor.com まで直接ご連絡ください。
+            このフォームの送信にはJavaScriptが必要です。うまく送信できない場合は、お手数ですが info@bondtailor.com まで直接ご連絡ください。
           </p>
         </noscript>
         <!-- 連絡先 -->
         <div class="form-row">
           <label>会社名<span class="req">必須</span></label>
-          <input type="text" name="data[User][company]" autocomplete="organization" required>
+          <input type="text" name="data[User][company]" id="Usercompany" required>
         </div>
         <div class="form-row">
           <label>お名前<span class="req">必須</span></label>
-          <input type="text" name="data[User][name1]" autocomplete="name" required>
+          <input type="text" name="data[User][name1]" id="Username1" required>
         </div>
         <div class="form-row">
           <label>メールアドレス<span class="req">必須</span></label>
-          <input type="email" name="data[User][mail]" autocomplete="email" required>
+          <input type="email" name="data[User][mail]" id="Usermail" required>
         </div>
         <div class="form-row">
           <label>電話番号<span class="opt">任意</span></label>
-          <input type="tel" name="data[User][tel]" autocomplete="tel">
+          <input type="tel" name="data[User][tel]" id="Usertel">
         </div>
 
         <!-- 会社情報 -->
         <div class="form-row">
           <label>業種<span class="req">必須</span></label>
-          <select data-diagnosis-key="業種" required>
+          <select name="業種" required>
             <option value="">選択してください</option>
             <option>営業会社（BtoB営業中心）</option>
             <option>営業会社（BtoC営業中心）</option>
@@ -1828,7 +1829,7 @@ p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:n
         </div>
         <div class="form-row">
           <label>社員数<span class="req">必須</span></label>
-          <select data-diagnosis-key="社員数" required>
+          <select name="社員数" required>
             <option value="">選択してください</option>
             <option>1〜10名</option>
             <option>11〜30名</option>
@@ -1841,7 +1842,7 @@ p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:n
         <!-- 診断 -->
         <div class="form-row">
           <label>診断したい対象<span class="req">必須</span></label>
-          <select data-diagnosis-key="診断したい対象" required>
+          <select name="診断したい対象" required>
             <option value="">選択してください</option>
             <option>営業担当者</option>
             <option>面接官</option>
@@ -1853,7 +1854,7 @@ p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:n
         </div>
         <div class="form-row">
           <label>一番気になる場面<span class="req">必須</span></label>
-          <select data-diagnosis-key="一番気になる場面" required>
+          <select name="一番気になる場面" required>
             <option value="">選択してください</option>
             <option>初回商談</option>
             <option>採用面接</option>
@@ -1866,7 +1867,7 @@ p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:n
         </div>
         <div class="form-row">
           <label>服装・身だしなみルール<span class="req">必須</span></label>
-          <select data-diagnosis-key="服装・身だしなみルール" required>
+          <select name="服装・身だしなみルール" required>
             <option value="">選択してください</option>
             <option>明文化された規定があり、運用されている</option>
             <option>規定はあるが、運用は個人任せになっている</option>
@@ -1877,7 +1878,7 @@ p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:n
         </div>
         <div class="form-row">
           <label>まず整えるなら<span class="req">必須</span></label>
-          <select data-diagnosis-key="まず整えるなら" required>
+          <select name="まず整えるなら" required>
             <option value="">選択してください</option>
             <option>営業担当者から</option>
             <option>面接官から</option>
@@ -1889,7 +1890,7 @@ p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:n
         </div>
         <div class="form-row">
           <label>原価オーダースーツ制度への関心<span class="req">必須</span></label>
-          <select data-diagnosis-key="原価オーダースーツ制度への関心" required>
+          <select name="原価オーダースーツ制度への関心" required>
             <option value="">選択してください</option>
             <option>具体的に検討したい</option>
             <option>仕組みは知りたい</option>
@@ -1898,11 +1899,9 @@ p,li,.section-lead,.hero-lead,.faq-a-inner,.quote{line-break:strict;word-break:n
           </select>
         </div>
         <div class="form-row full">
-  <label>具体的に気になっていること<span class="opt">任意・可能な範囲で</span></label>
-  <textarea data-diagnosis-key="具体的に気になっていること" placeholder="例：若手営業の商談継続率が落ちている／面接で内定辞退が増えている、など。お困りの場面を1〜3行でお書きください。未定の場合は「特になし」でも問題ありません。"></textarea>
-</div>
-
-<input type="hidden" id="myaspFree2" name="data[User][free2]" value="">
+          <label>具体的に気になっていること<span class="opt">任意・可能な範囲で</span></label>
+          <textarea name="具体的に気になっていること" placeholder="例：若手営業の商談継続率が落ちている／面接で内定辞退が増えている、など。お困りの場面を1〜3行でお書きください。未定の場合は「特になし」でも問題ありません。"></textarea>
+        </div>
 
         <div class="form-row full form-submit-row">
           <button type="submit" class="form-submit">
@@ -2072,8 +2071,7 @@ if('IntersectionObserver' in window){
 }
 
 // Form: MyASPへの送信ロジック
-// 連絡先はMyASPの標準name属性で直接POST。
-// 診断回答は送信直前に data[User][free2] へ1つの文章として格納し、MyASPに渡す。
+// 連絡先はMyASPのname属性で直接送信し、診断回答は送信直前に data[User][free2] へまとめる。
 (function(){
   const form = document.getElementById('bondForm');
   if(!form) return;
@@ -2086,34 +2084,31 @@ if('IntersectionObserver' in window){
     }, 150);
   });
 
-  const diagnosisKeys = [
-    '業種',
-    '社員数',
-    '診断したい対象',
-    '一番気になる場面',
-    '服装・身だしなみルール',
-    'まず整えるなら',
-    '原価オーダースーツ制度への関心',
-    '具体的に気になっていること'
-  ];
-
-  const getDiagnosisValue = (key) => {
-    const el = form.querySelector('[data-diagnosis-key="' + key + '"]');
-    return el ? (el.value || '').trim() : '';
-  };
-
   form.addEventListener('submit', function(){
-    const free2Input = document.getElementById('myaspFree2');
-    if(!free2Input) return;
+    const get = (name) => {
+      const el = form.querySelector('[name="' + name + '"]');
+      return el ? (el.value || '').trim() : '';
+    };
 
-    const free2 = diagnosisKeys
-      .map(function(key){ return [key, getDiagnosisValue(key)]; })
+    const fields = [
+      ['業種', get('業種')],
+      ['社員数', get('社員数')],
+      ['診断したい対象', get('診断したい対象')],
+      ['一番気になる場面', get('一番気になる場面')],
+      ['服装・身だしなみルール', get('服装・身だしなみルール')],
+      ['まず整えるなら', get('まず整えるなら')],
+      ['原価オーダースーツ制度への関心', get('原価オーダースーツ制度への関心')],
+      ['具体的に気になっていること', get('具体的に気になっていること')]
+    ];
+
+    const free2 = fields
       .filter(function(pair){ return pair[1] !== ''; })
       .map(function(pair){ return '【' + pair[0] + '】' + pair[1]; })
-  .join('\n');
+      .join('\n');
 
-    free2Input.value = free2;
-    // preventDefaultしない。通常のHTMLフォーム送信でMyASPへPOSTする。
+    const free2Input = document.getElementById('Userfree2');
+    if(free2Input) free2Input.value = free2;
+    // preventDefaultは使わず、このままMyASPへ通常POSTする
   });
 })();
 </script>
