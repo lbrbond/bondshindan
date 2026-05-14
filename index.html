@@ -2109,8 +2109,7 @@ if('IntersectionObserver' in window){
       .map(function(key){ return [key, getDiagnosisValue(key)]; })
       .filter(function(pair){ return pair[1] !== ''; })
       .map(function(pair){ return '【' + pair[0] + '】' + pair[1]; })
-      .join('
-');
+  .join('\n');
 
     free2Input.value = free2;
     // preventDefaultしない。通常のHTMLフォーム送信でMyASPへPOSTする。
